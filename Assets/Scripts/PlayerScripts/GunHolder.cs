@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class GunHolder : MonoBehaviour
 {
-
     private Transform player;
-
 
     //camera and mouse
     private Camera mainCam;
@@ -14,13 +12,11 @@ public class GunHolder : MonoBehaviour
     static public float mousePosMinDistance;
     static public float mousePosDistanceFromPlayer;
 
-    // Start is called before the first frame update
     void Start()
     {
         mousePosMinDistance = 10.05241f;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
     }
 
 
@@ -29,7 +25,6 @@ public class GunHolder : MonoBehaviour
         mousePosDistanceFromPlayer = Vector3.Distance(player.position, mousePos);
     }
 
-    // Update is called once per frame
     void Update()
     {
         RotationToCursor();

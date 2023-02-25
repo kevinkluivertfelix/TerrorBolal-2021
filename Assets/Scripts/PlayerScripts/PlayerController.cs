@@ -14,19 +14,19 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
         Move();
     }
 
     void Update()
-    {        
+    {
     }
 
     private void Move()
     {
-        float horizontal = Input.GetAxis("Vertical");
-        rb.velocity = new Vector2(rb.velocity.x, horizontal * speed);
+        float Vertical = Input.GetAxis("Vertical");
+        rb.velocity = new Vector2(rb.velocity.x, Vertical * speed * Time.deltaTime);
     }
 }
 

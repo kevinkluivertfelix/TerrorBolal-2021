@@ -16,5 +16,4 @@ public class GameController : MonoBehaviour
     {
         healthText.text = _wall.wallHealth.ToString();
     }
-
 }

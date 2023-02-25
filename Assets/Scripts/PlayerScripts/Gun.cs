@@ -15,17 +15,12 @@ public class Gun : MonoBehaviour
     private bool canFire;
     private float timer;
 
-    
-
-
-    // Start is called before the first frame update
     void Start()
     {
         bulletPrefab.GetComponent<Bullet>().spreadFactor = spread;
         bulletPrefab.GetComponent<Bullet>().damage = Damage;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Fire();
@@ -47,7 +42,6 @@ public class Gun : MonoBehaviour
 
     private void CanFire()
     {
-
         if (GunHolder.mousePosDistanceFromPlayer < GunHolder.mousePosMinDistance)
         {
             canFire = false;
